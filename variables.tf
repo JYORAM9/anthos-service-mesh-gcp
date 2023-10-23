@@ -8,3 +8,9 @@ variable "region" {
   description = "The region to host the cluster in"
   default     = ""
 }
+
+variable "google_credentials" {
+  type        = string
+  description = "The gcp creds"
+  default     = ""
+}

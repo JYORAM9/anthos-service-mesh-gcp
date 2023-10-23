@@ -25,3 +25,13 @@ terraform {
     }
   }
 }
+
+provider "google" {
+  credentials = var.google_credentials
+  project     = var.project_id
+}
+
+provider "google-beta" {
+  credentials = var.google_credentials
+  project     = var.project_id
+}
