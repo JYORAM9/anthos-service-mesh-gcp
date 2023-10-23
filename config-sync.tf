@@ -2,7 +2,7 @@ resource "google_gke_hub_feature_membership" "feature_member" {
   location   = "global"
   feature    = google_gke_hub_feature.feature.name
   membership = google_gke_hub_membership.membership.membership_id
-  project    = data.terraform_remote_state.gke_terraform_cluster.outputs.project_id
+  project    = var.project_id
   configmanagement {
     version = "1.15.3"
     config_sync {
